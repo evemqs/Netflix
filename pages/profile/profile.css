@@ -2,23 +2,23 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family:'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
   text-decoration: none;
 }
 
 html, body {
+  height: 100%;
   margin: 0;
   padding: 0;
-  height: 100%;
 }
 
 body {
-  background-color: rgb(0, 0, 0);
+  background-color: #000000;
 }
 
 header {
-  margin: 0 9rem 0 9rem;
-  padding: 0.5rem 0 0.5rem 0;
+  margin: 0 9rem;
+  padding: 0.5rem 0;
 }
 
 nav #logo{
@@ -42,6 +42,8 @@ nav #logo{
 #container-profiles {
   display: flex;
   gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .profiles {
@@ -50,37 +52,56 @@ nav #logo{
   align-items: center;
   justify-content: flex-end;
   gap: 0.5rem;
-
-  p {
-    color: #969696;
-  }
-
-  .material-symbols-outlined {
-    color: #969696;
-    font-size: 5rem;
-    font-weight: 600;
-    padding-bottom: 2rem;
-    pointer-events: none;
-  }
-
-  img {
-    width: 10rem;
-    height: 10rem;
-    border-radius: 0.2rem;
-  }
-
+  position: relative;
+  cursor: pointer;
+  text-align: center;
 }
 
-img:hover ~ p {
-  color: #e50914;
+.profiles img {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 0.2rem;
+  object-fit: cover;
+  border: 1px solid transparent;
+  transition: border-color 0.5s ease;
+}
+
+.profiles p {
+  color: #969696;
   transition: color 0.5s ease;
 }
 
-.button {
-  background-color: black;
+.profiles .material-symbols-outlined {
   color: #969696;
-  border: 0.1rem solid #969696;
+  font-size: 5rem;
+  font-weight: 600;
+  padding-bottom: 2rem;
+  transition: color 0.5s ease;
+}
+
+.profiles:hover img,
+.profiles:hover p,
+.profiles:hover .material-symbols-outlined {
+  border-color: #e50914;
+  color: #e50914;
+}
+
+button {
+  background-color: #000000;
+  color: #969696;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border: 1px solid #969696;
   border-radius: 0.2rem;
   padding: 0.5rem 1.4rem;
   margin-top: 1rem;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  transition: border-color 0.5s ease, color 0.5s ease;
+}
+
+button:hover {
+  border-color: #e50914;
+  color: #e50914;
 }

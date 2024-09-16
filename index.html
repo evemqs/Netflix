@@ -19,18 +19,19 @@
   <main>
     <section id="container-login">
       <h1>Entrar</h1>
-      <form class="forms">
-        <input type="email" name="email" placeholder="Email ou número de celular">
-        <input type="password" name="password" placeholder="Senha">
+      <form action="/pages/profile/profile.html" class="forms">
+        <input type="email" id="email" name="email" placeholder="Email ou número de celular" required>
+        <input type="password" id="password" name="password" placeholder="Senha" required>
+        <button type="submit" class="button-submit">Entrar</button>
       </form>
       <div class="buttons">
-        <a href="/pages/profile/profile.html" class="button-submit">Entrar</a>
         <p>OU</p>
-        <a href="/pages/profile/profile.html" class="button-code">Usar um código de acesso</a>
+        <button class="button-code">Usar um código de acesso</button>
         <span class="white">Esqueceu a senha?</span>
       </div>
       <div class="check">
-        <input type="checkbox" name="checkbox" id="checkbox" checked><span class="white">Lembre-se de mim</span>
+        <input type="checkbox" name="checkbox" id="checkbox" checked>
+        <label for="checkbox" class="white">Lembre-se de mim</label>
       </div>
       <p>Novo por aqui? <span class="white">Assine agora.</span></p>
       <p class="captcha">Esta página é protegida pelo Google reCAPTCHA para
@@ -55,6 +56,15 @@
       <div class="links">
         <a href="#">Privacidade</a>
       </div>
+    </section>
+    <section class="lng">
+      <div class="svg">
+        <span class="material-symbols-outlined">translate</span>
+      </div>
+      <select name="language" id="language">
+        <option value="pt">Português</option>
+        <option value="eng">English</option>
+      </select>
     </section>
   </footer>
 </body>
